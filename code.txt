@@ -1,0 +1,52 @@
+--Variable init
+3001    --R0 <- #1
+3164    --R1 <-#100  -- Matrix 1
+32E2	--R2 <-#226
+4210	--R2 = R2 + R1 -- Matrix 2
+33E2	--R3 <-#226
+4320	--R3 = R3 + R2 -- Result matrix
+3800	--R8 <- #0
+4830	--R8 = R8 + R3 -- R8 <- R3
+37E0	--R7 <-#224
+4730	--R7 = R7 + R3  -- Last value of result matrix
+
+-- Calculation
+8410	--R4 <- mem[R1]
+8520	--R5 <- mem[R2]
+4450	--R4 = R4 + R5
+2340	-- mem[R3] <- R4
+
+-- Increment of registers
+4100	-- R1++
+4200	-- R2++	
+4300 	-- R3++
+
+8970	-- R9 <- mem[R7] --Check last value of result matrix
+-- Loop to Calculation ...Jumps will depend on line
+690A	-- R9=0: PC<-#11
+
+--Output
+37E1	--R7 <- #225
+3900	--R9 <- #0
+
+8480	--R4 <- mem[R8]
+1463	--mem[99] <- R4
+7063	--print mem[99]
+4800	--R8++
+
+5700	-- R7--
+67XX	-- R7=0: PC<-#HALT
+69YY	-- R9=0: PC<-#YY
+
+F000 --HALT
+
+
+
+
+
+
+
+
+
+ 
+

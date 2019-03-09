@@ -1,0 +1,185 @@
+m255
+K3
+z0
+13
+cModel Technology
+dF:\ECG\Courses\ECE3242\Assignments\2016\SimpleCompArch\simulation\qsim
+Ehard_block
+Z0 w1551901490
+Z1 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 e`^h93R^CdmMEVe0e1VU_3
+Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z6 DPx10 cycloneive 21 cycloneive_components 0 22 Q;lLU[K?fTJPSa^YaZf>B3
+Z7 dC:/Users/icrossle/Desktop/group7/SimpleCompArch2019/simulation/qsim
+Z8 8SimpleCompArch.vho
+Z9 FSimpleCompArch.vho
+l0
+L35
+VB]0;STalBkCB1_B4BXQDW2
+!s100 >mXi5[`cD`bFC`UBKA<om3
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1551901491
+!i10b 1
+Z12 !s108 1551901491.000000
+Z13 !s90 -work|work|SimpleCompArch.vho|
+Z14 !s107 SimpleCompArch.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+DEx4 work 10 hard_block 0 22 B]0;STalBkCB1_B4BXQDW2
+l65
+L51
+Via>5o7W??azG@W@@eFOTF0
+!s100 [5;Wd8QGQ>@2NGoJ1I]Y43
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+vSimpleCompArch
+Z17 !s110 1484341113
+!i10b 1
+!s100 S[=;m7PZ9C9Llo>Zk]oV:0
+IghaVHJ<YHIThZ@X?YQV0I0
+Z18 VDg1SIo80bB@j0V0VzS_@n1
+Z19 dF:/ECG/Courses/ECE3242/Assignments/2016/SimpleCompArch2016/simulation/qsim
+w1484341109
+8SimpleCompArch.vo
+FSimpleCompArch.vo
+L0 32
+Z20 OV;L;10.4d;61
+r1
+!s85 0
+31
+!s108 1484341110.000000
+!s107 SimpleCompArch.vo|
+!s90 -work|work|SimpleCompArch.vo|
+!i113 1
+R15
+n@simple@comp@arch
+Esimplecomparch
+R0
+R2
+R6
+R1
+Z21 DPx6 altera 11 dffeas_pack 0 22 >EJOc2K4@P4f?njWHdOcd0
+R3
+R4
+R5
+Z22 DPx6 altera 28 altera_primitives_components 0 22 14j`ZKHCzSI;]V?hmAE6_1
+R7
+R8
+R9
+l0
+L80
+VFARgY`]ACSAjHeJKGJNQM2
+!s100 k0cYEYcH1FGV=P2W?Q;k=3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R2
+R6
+R1
+R21
+R3
+R4
+R5
+R22
+DEx4 work 14 simplecomparch 0 22 FARgY`]ACSAjHeJKGJNQM2
+l1280
+L208
+VekB5NQn39W2L587LlKE3;2
+!s100 :^U;fk2NB=fNh?jX2gIkP2
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Esimplecomparch_vhd_vec_tst
+Z23 w1551901489
+R4
+R5
+R7
+Z24 8SimSimpleCompArch.vwf.vht
+Z25 FSimSimpleCompArch.vwf.vht
+l0
+L32
+VAfzSA<<F>LC=zhdi8EOR60
+!s100 ZS[MUcJX<Xh8^58z5N;`X2
+R10
+32
+R11
+!i10b 1
+R12
+Z26 !s90 -work|work|SimSimpleCompArch.vwf.vht|
+Z27 !s107 SimSimpleCompArch.vwf.vht|
+!i113 1
+R15
+R16
+Asimplecomparch_arch
+R4
+R5
+Z28 DEx4 work 26 simplecomparch_vhd_vec_tst 0 22 AfzSA<<F>LC=zhdi8EOR60
+l79
+L34
+VIW2jAm:=YDeH0`MhhTV_63
+!s100 RiHL4NXdF8L]IDoP`j;^Y3
+R10
+32
+R11
+!i10b 1
+R12
+R26
+R27
+!i113 1
+R15
+R16
+vSimpleCompArch_vlg_vec_tst
+R17
+!i10b 1
+!s100 ^3`LT0=lk]A5QnBIm^LXU2
+IGG1W<lYO9S9zGEoZj9AjE3
+R18
+R19
+w1484341105
+8SimSimpleCompArch.vwf.vt
+FSimSimpleCompArch.vwf.vt
+L0 30
+R20
+r1
+!s85 0
+31
+!s108 1484341113.000000
+!s107 SimSimpleCompArch.vwf.vt|
+!s90 -work|work|SimSimpleCompArch.vwf.vt|
+!i113 1
+R15
+n@simple@comp@arch_vlg_vec_tst
