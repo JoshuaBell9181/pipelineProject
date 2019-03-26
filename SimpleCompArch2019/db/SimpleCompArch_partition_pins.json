@@ -208,14 +208,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "D_PCld",
-					"strict" : false
-				},
-				{
-					"name" : "D_jpz",
-					"strict" : false
-				},
-				{
 					"name" : "D_mdout_bus[0]",
 					"strict" : false
 				},
@@ -397,6 +389,70 @@
 				},
 				{
 					"name" : "D_Mwe",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[0]",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[1]",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[2]",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[3]",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[4]",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[5]",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[6]",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[7]",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[8]",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[9]",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[10]",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[11]",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[12]",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[13]",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[14]",
+					"strict" : false
+				},
+				{
+					"name" : "count_clock[15]",
 					"strict" : false
 				},
 				{

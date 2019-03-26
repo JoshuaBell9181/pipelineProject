@@ -1,0 +1,72 @@
+MIF/HEX Update report for SimpleCompArch
+Mon Mar 25 17:03:33 2019
+Quartus Prime Version 17.0.2 Build 602 07/19/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. MIF/HEX Update Summary
+  3. MIF/HEX Update Processed Files
+  4. MIF/HEX Update Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; MIF/HEX Update Summary                                        ;
++-----------------------+---------------------------------------+
+; MIF/HEX Update Status ; Successful - Mon Mar 25 17:03:33 2019 ;
+; Revision Name         ; SimpleCompArch                        ;
+; Top-level Entity Name ; SimpleCompArch                        ;
+; Family                ; Cyclone IV E                          ;
+; Device                ; EP4CE115F29C7                         ;
++-----------------------+---------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                        ;
++-----------------------------------------------------------------------+
+; File Name                                                             ;
++-----------------------------------------------------------------------+
+; C:/Users/icrossle/Desktop/pipelineProject/SimpleCompArch2019/init.hex ;
++-----------------------------------------------------------------------+
+
+
++-------------------------+
+; MIF/HEX Update Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime MIF/HEX Update
+    Info: Version 17.0.2 Build 602 07/19/2017 SJ Standard Edition
+    Info: Processing started: Mon Mar 25 17:03:32 2019
+Info: Command: quartus_cdb SimpleCompArch -c SimpleCompArch --update_mif
+Info (39024): Processed the following Memory Initialization File(s)
+    Info (39025): Processed Memory Initialization File C:/Users/icrossle/Desktop/pipelineProject/SimpleCompArch2019/init.hex File: C:/Users/icrossle/Desktop/pipelineProject/SimpleCompArch2019/init.hex Line: 0
+Info: Quartus Prime MIF/HEX Update was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 631 megabytes
+    Info: Processing ended: Mon Mar 25 17:03:34 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+

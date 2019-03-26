@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "03/06/2019 14:42:00"
+-- Generated on "03/25/2019 17:18:19"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          SimpleCompArch
 -- 
@@ -34,6 +34,7 @@ END SimpleCompArch_vhd_vec_tst;
 ARCHITECTURE SimpleCompArch_arch OF SimpleCompArch_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
+SIGNAL count_clock : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL D_ALUs : STD_LOGIC_VECTOR(1 DOWNTO 0);
 SIGNAL D_jpz : STD_LOGIC;
 SIGNAL D_mdin_bus : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -55,24 +56,25 @@ SIGNAL sys_output : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL sys_rst : STD_LOGIC;
 COMPONENT SimpleCompArch
 	PORT (
-	D_ALUs : BUFFER STD_LOGIC_VECTOR(1 DOWNTO 0);
-	D_jpz : BUFFER STD_LOGIC;
-	D_mdin_bus : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
-	D_mdout_bus : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
-	D_mem_addr : BUFFER STD_LOGIC_VECTOR(11 DOWNTO 0);
-	D_Mre : BUFFER STD_LOGIC;
-	D_Mwe : BUFFER STD_LOGIC;
-	D_PCld : BUFFER STD_LOGIC;
-	D_rfout_bus : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
-	D_RFr1a : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0);
-	D_RFr1e : BUFFER STD_LOGIC;
-	D_RFr2a : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0);
-	D_RFr2e : BUFFER STD_LOGIC;
-	D_RFs : BUFFER STD_LOGIC_VECTOR(1 DOWNTO 0);
-	D_RFwa : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0);
-	D_RFwe : BUFFER STD_LOGIC;
+	count_clock : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	D_ALUs : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+	D_jpz : OUT STD_LOGIC;
+	D_mdin_bus : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	D_mdout_bus : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	D_mem_addr : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
+	D_Mre : OUT STD_LOGIC;
+	D_Mwe : OUT STD_LOGIC;
+	D_PCld : OUT STD_LOGIC;
+	D_rfout_bus : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	D_RFr1a : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	D_RFr1e : OUT STD_LOGIC;
+	D_RFr2a : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	D_RFr2e : OUT STD_LOGIC;
+	D_RFs : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
+	D_RFwa : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	D_RFwe : OUT STD_LOGIC;
 	sys_clk : IN STD_LOGIC;
-	sys_output : BUFFER STD_LOGIC_VECTOR(15 DOWNTO 0);
+	sys_output : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	sys_rst : IN STD_LOGIC
 	);
 END COMPONENT;
@@ -80,6 +82,7 @@ BEGIN
 	i1 : SimpleCompArch
 	PORT MAP (
 -- list connections between master ports and signals
+	count_clock => count_clock,
 	D_ALUs => D_ALUs,
 	D_jpz => D_jpz,
 	D_mdin_bus => D_mdin_bus,

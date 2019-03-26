@@ -1,5 +1,5 @@
 EDA Netlist Writer report for SimpleCompArch
-Wed Mar 06 15:44:50 2019
+Mon Mar 25 23:00:36 2019
 Quartus Prime Version 17.0.2 Build 602 07/19/2017 SJ Standard Edition
 
 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed Mar 06 15:44:50 2019 ;
+; EDA Netlist Writer Status ; Successful - Mon Mar 25 23:00:36 2019 ;
 ; Revision Name             ; SimpleCompArch                        ;
 ; Top-level Entity Name     ; SimpleCompArch                        ;
 ; Family                    ; Cyclone IV E                          ;
@@ -66,13 +66,13 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                              ;
-+-----------------------------------------------------------------------------------------+
-; Generated Files                                                                         ;
-+-----------------------------------------------------------------------------------------+
-; C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/simulation/qsim//SimpleCompArch.vho ;
-+-----------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Simulation Generated Files                                                        ;
++-----------------------------------------------------------------------------------+
+; Generated Files                                                                   ;
++-----------------------------------------------------------------------------------+
+; C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/Simulation/SimpleCompArch.vho ;
++-----------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -81,27 +81,13 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 17.0.2 Build 602 07/19/2017 SJ Standard Edition
-    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
-    Info: Your use of Intel Corporation's design tools, logic functions 
-    Info: and other software and tools, and its AMPP partner logic 
-    Info: functions, and any output files from any of the foregoing 
-    Info: (including device programming or simulation files), and any 
-    Info: associated documentation or information are expressly subject 
-    Info: to the terms and conditions of the Intel Program License 
-    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
-    Info: the Intel MegaCore Function License Agreement, or other 
-    Info: applicable license agreement, including, without limitation, 
-    Info: that your use is for the sole purpose of programming logic 
-    Info: devices manufactured by Intel and sold by Intel or its 
-    Info: authorized distributors.  Please refer to the applicable 
-    Info: agreement for further details.
-    Info: Processing started: Wed Mar 06 15:44:50 2019
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/simulation/qsim/ SimpleCompArch -c SimpleCompArch
-Info (204019): Generated file SimpleCompArch.vho in folder "C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/simulation/qsim//" for EDA simulation tool
+    Info: Processing started: Mon Mar 25 23:00:35 2019
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off SimpleCompArch -c SimpleCompArch
+Info (204019): Generated file SimpleCompArch.vho in folder "C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/Simulation/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 509 megabytes
-    Info: Processing ended: Wed Mar 06 15:44:50 2019
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 510 megabytes
+    Info: Processing ended: Mon Mar 25 23:00:36 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

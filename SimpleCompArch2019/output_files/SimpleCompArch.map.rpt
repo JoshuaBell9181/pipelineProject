@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SimpleCompArch
-Wed Mar 06 15:41:49 2019
+Mon Mar 25 23:00:14 2019
 Quartus Prime Version 17.0.2 Build 602 07/19/2017 SJ Standard Edition
 
 
@@ -18,14 +18,14 @@ Quartus Prime Version 17.0.2 Build 602 07/19/2017 SJ Standard Edition
  10. State Machine - |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|controller:U0|state
  11. User-Specified and Inferred Latches
  12. Registers Removed During Synthesis
- 13. Removed Registers Triggering Further Register Optimizations
- 14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for mem:Unit2|altsyncram:altsyncram_component|altsyncram_csq3:auto_generated
- 18. Parameter Settings for User Entity Instance: mem:Unit2|altsyncram:altsyncram_component
- 19. altsyncram Parameter Settings by Entity Instance
- 20. Port Connectivity Checks: "CPU:Unit1|ctrl_unit:Unit0|bigmux:U3"
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for mem:Unit2|altsyncram:altsyncram_component|altsyncram_csq3:auto_generated
+ 17. Parameter Settings for User Entity Instance: mem:Unit2|altsyncram:altsyncram_component
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "CPU:Unit1|ctrl_unit:Unit0|bigmux:U3"
+ 20. Port Connectivity Checks: "CPU:Unit1|ctrl_unit:Unit0|controller:U0"
  21. Port Connectivity Checks: "CPU:Unit1|ctrl_unit:Unit0"
  22. Post-Synthesis Netlist Statistics for Top Partition
  23. Elapsed Time Per Partition
@@ -56,16 +56,16 @@ agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 06 15:41:49 2019           ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar 25 23:00:14 2019           ;
 ; Quartus Prime Version              ; 17.0.2 Build 602 07/19/2017 SJ Standard Edition ;
 ; Revision Name                      ; SimpleCompArch                                  ;
 ; Top-level Entity Name              ; SimpleCompArch                                  ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 811                                             ;
-;     Total combinational functions  ; 550                                             ;
-;     Dedicated logic registers      ; 359                                             ;
-; Total registers                    ; 359                                             ;
-; Total pins                         ; 101                                             ;
+; Total logic elements               ; 814                                             ;
+;     Total combinational functions  ; 560                                             ;
+;     Dedicated logic registers      ; 372                                             ;
+; Total registers                    ; 372                                             ;
+; Total pins                         ; 117                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 65,536                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -217,31 +217,31 @@ agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 811           ;
+; Estimated Total logic elements              ; 814           ;
 ;                                             ;               ;
-; Total combinational functions               ; 550           ;
+; Total combinational functions               ; 560           ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 420           ;
-;     -- 3 input functions                    ; 73            ;
-;     -- <=2 input functions                  ; 57            ;
+;     -- 4 input functions                    ; 423           ;
+;     -- 3 input functions                    ; 64            ;
+;     -- <=2 input functions                  ; 73            ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 523           ;
-;     -- arithmetic mode                      ; 27            ;
+;     -- normal mode                          ; 519           ;
+;     -- arithmetic mode                      ; 41            ;
 ;                                             ;               ;
-; Total registers                             ; 359           ;
-;     -- Dedicated logic registers            ; 359           ;
+; Total registers                             ; 372           ;
+;     -- Dedicated logic registers            ; 372           ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
-; I/O pins                                    ; 101           ;
+; I/O pins                                    ; 117           ;
 ; Total memory bits                           ; 65536         ;
 ;                                             ;               ;
 ; Embedded Multiplier 9-bit elements          ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; sys_clk~input ;
-; Maximum fan-out                             ; 375           ;
-; Total fan-out                               ; 3866          ;
-; Average fan-out                             ; 3.43          ;
+; Maximum fan-out                             ; 388           ;
+; Total fan-out                               ; 3919          ;
+; Average fan-out                             ; 3.32          ;
 +---------------------------------------------+---------------+
 
 
@@ -250,15 +250,15 @@ agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Entity Name     ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------+-----------------+--------------+
-; |SimpleCompArch                           ; 550 (1)             ; 359 (0)                   ; 65536       ; 0            ; 0       ; 0         ; 101  ; 0            ; |SimpleCompArch                                                                          ; SimpleCompArch  ; work         ;
-;    |CPU:Unit1|                            ; 549 (0)             ; 359 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1                                                                ; CPU             ; work         ;
-;       |ctrl_unit:Unit0|                   ; 108 (0)             ; 71 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0                                                ; ctrl_unit       ; work         ;
+; |SimpleCompArch                           ; 560 (16)            ; 372 (16)                  ; 65536       ; 0            ; 0       ; 0         ; 117  ; 0            ; |SimpleCompArch                                                                          ; SimpleCompArch  ; work         ;
+;    |CPU:Unit1|                            ; 544 (0)             ; 356 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1                                                                ; CPU             ; work         ;
+;       |ctrl_unit:Unit0|                   ; 111 (0)             ; 68 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0                                                ; ctrl_unit       ; work         ;
 ;          |IR:U2|                          ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|IR:U2                                          ; IR              ; work         ;
-;          |PC:U1|                          ; 16 (16)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|PC:U1                                          ; PC              ; work         ;
+;          |PC:U1|                          ; 12 (12)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|PC:U1                                          ; PC              ; work         ;
 ;          |bigmux:U3|                      ; 20 (20)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|bigmux:U3                                      ; bigmux          ; work         ;
-;          |controller:U0|                  ; 56 (56)             ; 59 (59)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|controller:U0                                  ; controller      ; work         ;
-;       |datapath:Unit1|                    ; 441 (0)             ; 288 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1|datapath:Unit1                                                 ; datapath        ; work         ;
-;          |alu:U3|                         ; 73 (73)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1|datapath:Unit1|alu:U3                                          ; alu             ; work         ;
+;          |controller:U0|                  ; 63 (63)             ; 56 (56)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|controller:U0                                  ; controller      ; work         ;
+;       |datapath:Unit1|                    ; 433 (0)             ; 288 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1|datapath:Unit1                                                 ; datapath        ; work         ;
+;          |alu:U3|                         ; 65 (65)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1|datapath:Unit1|alu:U3                                          ; alu             ; work         ;
 ;          |reg_file:U2|                    ; 344 (344)           ; 288 (288)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1|datapath:Unit1|reg_file:U2                                     ; reg_file        ; work         ;
 ;          |smallmux:U1|                    ; 24 (24)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|CPU:Unit1|datapath:Unit1|smallmux:U1                                     ; smallmux        ; work         ;
 ;    |mem:Unit2|                            ; 0 (0)               ; 0 (0)                     ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |SimpleCompArch|mem:Unit2                                                                ; mem             ; work         ;
@@ -287,45 +287,58 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|controller:U0|state                                                                                                                                                                                                                                                                                                                                     ;
-+------------+------------+------------+------------+-----------+------------+-----------+-----------+-----------+-----------+----------+-----------+-----------+----------+-----------+-----------+----------+-----------+----------+-----------+-----------+----------+-----------+-----------+----------+-----------+-----------+----------+----------+-----------+-----------+----------+------------+----------+
-; Name       ; state.S12c ; state.S12b ; state.S12a ; state.S12 ; state.S11a ; state.S11 ; state.S10 ; state.S9b ; state.S9a ; state.S9 ; state.S8b ; state.S8a ; state.S8 ; state.S7b ; state.S7a ; state.S7 ; state.S6a ; state.S6 ; state.S5b ; state.S5a ; state.S5 ; state.S4b ; state.S4a ; state.S4 ; state.S3b ; state.S3a ; state.S3 ; state.S2 ; state.S1b ; state.S1a ; state.S1 ; state.Sdly ; state.S0 ;
-+------------+------------+------------+------------+-----------+------------+-----------+-----------+-----------+-----------+----------+-----------+-----------+----------+-----------+-----------+----------+-----------+----------+-----------+-----------+----------+-----------+-----------+----------+-----------+-----------+----------+----------+-----------+-----------+----------+------------+----------+
-; state.S0   ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 0        ;
-; state.Sdly ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 1          ; 1        ;
-; state.S1   ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 1        ; 0          ; 1        ;
-; state.S1a  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 1         ; 0        ; 0          ; 1        ;
-; state.S1b  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 1         ; 0         ; 0        ; 0          ; 1        ;
-; state.S2   ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 1        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S3   ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 1        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S3a  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 1         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S3b  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 1         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S4   ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 1        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S4a  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 1         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S4b  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 1         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S5   ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 1        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S5a  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 1         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S5b  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 1         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S6   ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 1        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S6a  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 1         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S7   ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 1        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S7a  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 1         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S7b  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 1         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S8   ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 1        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S8a  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 1         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S8b  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 1         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S9   ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 1        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S9a  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 1         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S9b  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 1         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S10  ; 0          ; 0          ; 0          ; 0         ; 0          ; 0         ; 1         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S11  ; 0          ; 0          ; 0          ; 0         ; 0          ; 1         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S11a ; 0          ; 0          ; 0          ; 0         ; 1          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S12  ; 0          ; 0          ; 0          ; 1         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S12a ; 0          ; 0          ; 1          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S12b ; 0          ; 1          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-; state.S12c ; 1          ; 0          ; 0          ; 0         ; 0          ; 0         ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0         ; 0         ; 0        ; 0        ; 0         ; 0         ; 0        ; 0          ; 1        ;
-+------------+------------+------------+------------+-----------+------------+-----------+-----------+-----------+-----------+----------+-----------+-----------+----------+-----------+-----------+----------+-----------+----------+-----------+-----------+----------+-----------+-----------+----------+-----------+-----------+----------+----------+-----------+-----------+----------+------------+----------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|controller:U0|state                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++----------------+------------+------------+-----------+----------------+------------+------------+-----------+----------------+-----------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+-----------+----------+-----------+-----------+-----------+----------+----------+
+; Name           ; state.S12b ; state.S12a ; state.S12 ; state.S12Delay ; state.S11b ; state.S11a ; state.S11 ; state.S11Delay ; state.S10 ; state.S9b ; state.S9a ; state.S9 ; state.S9Delay ; state.S8b ; state.S8a ; state.S8 ; state.S8Delay ; state.S7b ; state.S7a ; state.S7 ; state.S7Delay ; state.S6b ; state.S6a ; state.S6 ; state.S6Delay ; state.S5b ; state.S5a ; state.S5 ; state.S5Delay ; state.S4b ; state.S4a ; state.S4 ; state.S4Delay ; state.S3b ; state.S3a ; state.S3 ; state.S3Delay ; state.S2c ; state.S2b ; state.S2a ; state.S2 ; state.S1c ; state.S1b ; state.S1a ; state.S1 ; state.S0 ;
++----------------+------------+------------+-----------+----------------+------------+------------+-----------+----------------+-----------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+-----------+----------+-----------+-----------+-----------+----------+----------+
+; state.S0       ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 0        ;
+; state.S1       ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 1        ; 1        ;
+; state.S1a      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 1         ; 0        ; 1        ;
+; state.S1b      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 1         ; 0         ; 0        ; 1        ;
+; state.S1c      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 1         ; 0         ; 0         ; 0        ; 1        ;
+; state.S2       ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 1        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S2a      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 1         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S2b      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 1         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S2c      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 1         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S3Delay  ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 1             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S3       ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 1        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S3a      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 1         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S3b      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 1         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S4Delay  ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 1             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S4       ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 1        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S4a      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 1         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S4b      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 1         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S5Delay  ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 1             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S5       ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 1        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S5a      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 1         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S5b      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 1         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S6Delay  ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 1             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S6       ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 1        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S6a      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 1         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S6b      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 1         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S7Delay  ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 1             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S7       ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 1        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S7a      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 1         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S7b      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 1         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S8Delay  ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 1             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S8       ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 1        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S8a      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 1         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S8b      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 1         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S9Delay  ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 1             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S9       ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 1        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S9a      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 1         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S9b      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 1         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S10      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 1         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S11Delay ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 1              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S11      ; 0          ; 0          ; 0         ; 0              ; 0          ; 0          ; 1         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S11a     ; 0          ; 0          ; 0         ; 0              ; 0          ; 1          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S11b     ; 0          ; 0          ; 0         ; 0              ; 1          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S12Delay ; 0          ; 0          ; 0         ; 1              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S12      ; 0          ; 0          ; 1         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S12a     ; 0          ; 1          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
+; state.S12b     ; 1          ; 0          ; 0         ; 0              ; 0          ; 0          ; 0         ; 0              ; 0         ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0        ; 0             ; 0         ; 0         ; 0         ; 0        ; 0         ; 0         ; 0         ; 0        ; 1        ;
++----------------+------------+------------+-----------+----------------+------------+------------+-----------+----------------+-----------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+----------+---------------+-----------+-----------+-----------+----------+-----------+-----------+-----------+----------+----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------+
@@ -362,59 +375,33 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                       ;
-+------------------------------------------------------------+---------------------------------------------+
-; Register name                                              ; Reason for Removal                          ;
-+------------------------------------------------------------+---------------------------------------------+
-; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S10          ; Lost fanout                                 ;
-; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.Sdly         ; Stuck at GND due to stuck port data_in      ;
-; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[0]     ; Stuck at VCC due to stuck port clock_enable ;
-; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[1..30] ; Stuck at GND due to stuck port clock_enable ;
-; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[31]    ; Stuck at VCC due to stuck port clock_enable ;
-; CPU:Unit1|ctrl_unit:Unit0|PC:U1|tmp_PC[12..15]             ; Lost fanout                                 ;
-; Total Number of Removed Registers = 38                     ;                                             ;
-+------------------------------------------------------------+---------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                               ;
-+----------------------------------------------------+---------------------------+----------------------------------------------------------+
-; Register name                                      ; Reason for Removal        ; Registers Removed due to This Register                   ;
-+----------------------------------------------------+---------------------------+----------------------------------------------------------+
-; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.Sdly ; Stuck at GND              ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[0],  ;
-;                                                    ; due to stuck port data_in ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[1],  ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[2],  ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[3],  ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[4],  ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[5],  ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[6],  ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[7],  ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[8],  ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[9],  ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[10], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[11], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[12], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[13], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[14], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[15], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[16], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[17], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[18], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[19], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[20], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[21], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[22], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[23], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[24], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[25], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[26], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[27], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[28], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[29], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[30], ;
-;                                                    ;                           ; CPU:Unit1|ctrl_unit:Unit0|controller:U0|maccesdelay[31]  ;
-+----------------------------------------------------+---------------------------+----------------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                             ;
++-------------------------------------------------------+----------------------------------------+
+; Register name                                         ; Reason for Removal                     ;
++-------------------------------------------------------+----------------------------------------+
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|IR_PS2[8..11] ; Lost fanout                            ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|jmpen_ctrl    ; Stuck at GND due to stuck port data_in ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|oe_ctrl       ; Stuck at GND due to stuck port data_in ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S1c     ; Lost fanout                            ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S2      ; Lost fanout                            ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S2a     ; Lost fanout                            ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S2b     ; Lost fanout                            ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S3a     ; Lost fanout                            ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S9Delay ; Lost fanout                            ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S9      ; Lost fanout                            ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S9a     ; Lost fanout                            ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S11a    ; Lost fanout                            ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S2c     ; Stuck at GND due to stuck port data_in ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S3b     ; Stuck at GND due to stuck port data_in ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S4b     ; Stuck at GND due to stuck port data_in ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S5b     ; Stuck at GND due to stuck port data_in ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S9b     ; Stuck at GND due to stuck port data_in ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S11b    ; Stuck at GND due to stuck port data_in ;
+; CPU:Unit1|ctrl_unit:Unit0|controller:U0|state.S12b    ; Stuck at GND due to stuck port data_in ;
+; CPU:Unit1|ctrl_unit:Unit0|PC:U1|tmp_PC[12..15]        ; Lost fanout                            ;
+; Total Number of Removed Registers = 26                ;                                        ;
++-------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -422,12 +409,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 359   ;
+; Total registers                              ; 372   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 12    ;
-; Number of registers using Asynchronous Clear ; 343   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 356   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 316   ;
+; Number of registers using Clock Enable       ; 324   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -448,17 +435,18 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|controller:U0|RFr1a_ctrl[0] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|PC:U1|tmp_PC[10]            ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|PC:U1|tmp_PC[8]             ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|PC:U1|tmp_PC[7]             ;
-; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; Yes        ; |SimpleCompArch|CPU:Unit1|datapath:Unit1|reg_file:U2|RFr1[6]          ;
-; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; Yes        ; |SimpleCompArch|CPU:Unit1|datapath:Unit1|reg_file:U2|RFr2[8]          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |SimpleCompArch|CPU:Unit1|datapath:Unit1|smallmux:U1|Mux3             ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|controller:U0|RFr1a_ctrl[1] ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; Yes        ; |SimpleCompArch|CPU:Unit1|datapath:Unit1|reg_file:U2|RFr1[11]         ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; Yes        ; |SimpleCompArch|CPU:Unit1|datapath:Unit1|reg_file:U2|RFr2[15]         ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |SimpleCompArch|CPU:Unit1|datapath:Unit1|smallmux:U1|Mux0             ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |SimpleCompArch|CPU:Unit1|datapath:Unit1|smallmux:U1|Mux10            ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |SimpleCompArch|CPU:Unit1|datapath:Unit1|alu:U3|Mux15                 ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|bigmux:U3|Mux7              ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|bigmux:U3|Mux9              ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |SimpleCompArch|CPU:Unit1|datapath:Unit1|alu:U3|Mux0                  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|bigmux:U3|Mux6              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|bigmux:U3|Mux11             ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|bigmux:U3|Mux15             ;
+; 12:1               ; 8 bits    ; 64 LEs        ; 16 LEs               ; 48 LEs                 ; No         ; |SimpleCompArch|CPU:Unit1|ctrl_unit:Unit0|controller:U0|Selector10    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 
 
@@ -561,6 +549,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+----------------------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CPU:Unit1|ctrl_unit:Unit0|controller:U0"                                                                                                             ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                                                                                      ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pcld_flag    ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; immdata_ctrl ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++--------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "CPU:Unit1|ctrl_unit:Unit0"                                                                      ;
 +------------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -575,27 +573,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 101                         ;
-; cycloneiii_ff         ; 359                         ;
-;     CLR               ; 43                          ;
+; boundary_port         ; 117                         ;
+; cycloneiii_ff         ; 372                         ;
+;     CLR               ; 48                          ;
 ;     ENA               ; 16                          ;
-;     ENA CLR           ; 288                         ;
-;     ENA CLR SLD       ; 12                          ;
+;     ENA CLR           ; 308                         ;
 ; cycloneiii_io_obuf    ; 16                          ;
-; cycloneiii_lcell_comb ; 550                         ;
-;     arith             ; 27                          ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 15                          ;
-;     normal            ; 523                         ;
+; cycloneiii_lcell_comb ; 561                         ;
+;     arith             ; 41                          ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 16                          ;
+;     normal            ; 520                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 43                          ;
-;         3 data inputs ; 58                          ;
-;         4 data inputs ; 420                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 44                          ;
+;         3 data inputs ; 48                          ;
+;         4 data inputs ; 423                         ;
 ; cycloneiii_ram_block  ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.40                        ;
-; Average LUT depth     ; 3.32                        ;
+; Max LUT depth         ; 5.50                        ;
+; Average LUT depth     ; 3.11                        ;
 +-----------------------+-----------------------------+
 
 
@@ -614,15 +611,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.2 Build 602 07/19/2017 SJ Standard Edition
-    Info: Processing started: Wed Mar 06 15:41:38 2019
+    Info: Processing started: Mon Mar 25 23:00:04 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SimpleCompArch -c SimpleCompArch
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file smallmux.vhd
     Info (12022): Found design unit 1: smallmux-behv File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/smallmux.vhd Line: 22
     Info (12023): Found entity 1: smallmux File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/smallmux.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file simplecomparch.vhd
-    Info (12022): Found design unit 1: SimpleCompArch-rtl File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/SimpleCompArch.vhd Line: 36
-    Info (12023): Found entity 1: SimpleCompArch File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/SimpleCompArch.vhd Line: 15
+    Info (12022): Found design unit 1: SimpleCompArch-rtl File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/SimpleCompArch.vhd Line: 38
+    Info (12023): Found entity 1: SimpleCompArch File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/SimpleCompArch.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file reg_file.vhd
     Info (12022): Found design unit 1: reg_file-behv File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/reg_file.vhd Line: 31
     Info (12023): Found entity 1: reg_file File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/reg_file.vhd Line: 16
@@ -634,7 +631,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file obuf.vh
     Info (12023): Found entity 1: obuf File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 14
 Info (12021): Found 2 design units, including 0 entities, in source file mp_lib.vhd
     Info (12022): Found design unit 1: MP_lib File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/MP_lib.vhd Line: 6
-    Info (12022): Found design unit 2: MP_lib-body File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/MP_lib.vhd Line: 207
+    Info (12022): Found design unit 2: MP_lib-body File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/MP_lib.vhd Line: 208
 Info (12021): Found 2 design units, including 1 entities, in source file ir.vhd
     Info (12022): Found design unit 1: IR-behv File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/IR.vhd Line: 22
     Info (12023): Found entity 1: IR File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/IR.vhd Line: 14
@@ -648,8 +645,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
     Info (12022): Found design unit 1: CPU-structure File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/CPU.vhd Line: 36
     Info (12023): Found entity 1: CPU File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/CPU.vhd Line: 15
 Info (12021): Found 2 design units, including 1 entities, in source file controller.vhd
-    Info (12022): Found design unit 1: controller-fsm File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/controller.vhd Line: 39
-    Info (12023): Found entity 1: controller File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/controller.vhd Line: 16
+    Info (12022): Found design unit 1: controller-fsm File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/controller.vhd Line: 40
+    Info (12023): Found entity 1: controller File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/controller.vhd Line: 15
 Info (12021): Found 2 design units, including 1 entities, in source file bigmux.vhd
     Info (12022): Found design unit 1: bigmux-behv File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/bigmux.vhd Line: 23
     Info (12023): Found entity 1: bigmux File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/bigmux.vhd Line: 13
@@ -660,10 +657,9 @@ Info (12021): Found 2 design units, including 1 entities, in source file mem.vhd
     Info (12022): Found design unit 1: mem-SYN File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/mem.vhd Line: 56
     Info (12023): Found entity 1: mem File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/mem.vhd Line: 44
 Info (12127): Elaborating entity "SimpleCompArch" for the top level hierarchy
-Info (12128): Elaborating entity "CPU" for hierarchy "CPU:Unit1" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/SimpleCompArch.vhd Line: 48
+Info (12128): Elaborating entity "CPU" for hierarchy "CPU:Unit1" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/SimpleCompArch.vhd Line: 64
 Info (12128): Elaborating entity "ctrl_unit" for hierarchy "CPU:Unit1|ctrl_unit:Unit0" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/CPU.vhd Line: 53
 Info (12128): Elaborating entity "controller" for hierarchy "CPU:Unit1|ctrl_unit:Unit0|controller:U0" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/ctrl_unit.vhd Line: 52
-Warning (10540): VHDL Signal Declaration warning at controller.vhd(46): used explicit default value for signal "usedelay" because signal was never assigned a value File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/controller.vhd Line: 46
 Info (12128): Elaborating entity "PC" for hierarchy "CPU:Unit1|ctrl_unit:Unit0|PC:U1" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/ctrl_unit.vhd Line: 56
 Info (12128): Elaborating entity "IR" for hierarchy "CPU:Unit1|ctrl_unit:Unit0|IR:U2" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/ctrl_unit.vhd Line: 57
 Warning (10631): VHDL Process Statement warning at IR.vhd(25): inferring latch(es) for signal or variable "IRout", which holds its previous value in one or more paths through the process File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/IR.vhd Line: 25
@@ -705,7 +701,7 @@ Info (12128): Elaborating entity "datapath" for hierarchy "CPU:Unit1|datapath:Un
 Info (12128): Elaborating entity "smallmux" for hierarchy "CPU:Unit1|datapath:Unit1|smallmux:U1" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/datapath.vhd Line: 44
 Info (12128): Elaborating entity "reg_file" for hierarchy "CPU:Unit1|datapath:Unit1|reg_file:U2" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/datapath.vhd Line: 46
 Info (12128): Elaborating entity "alu" for hierarchy "CPU:Unit1|datapath:Unit1|alu:U3" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/datapath.vhd Line: 50
-Info (12128): Elaborating entity "mem" for hierarchy "mem:Unit2" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/SimpleCompArch.vhd Line: 57
+Info (12128): Elaborating entity "mem" for hierarchy "mem:Unit2" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/SimpleCompArch.vhd Line: 73
 Info (12128): Elaborating entity "altsyncram" for hierarchy "mem:Unit2|altsyncram:altsyncram_component" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/mem.vhd Line: 63
 Info (12130): Elaborated megafunction instantiation "mem:Unit2|altsyncram:altsyncram_component" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/mem.vhd Line: 63
 Info (12133): Instantiated megafunction "mem:Unit2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/mem.vhd Line: 63
@@ -762,7 +758,8 @@ Info (12133): Instantiated megafunction "mem:Unit2|altsyncram:altsyncram_compone
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_csq3.tdf
     Info (12023): Found entity 1: altsyncram_csq3 File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/db/altsyncram_csq3.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_csq3" for hierarchy "mem:Unit2|altsyncram:altsyncram_component|altsyncram_csq3:auto_generated" File: c:/intelfpga/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "obuf" for hierarchy "obuf:Unit3" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/SimpleCompArch.vhd Line: 59
+Info (12128): Elaborating entity "obuf" for hierarchy "obuf:Unit3" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/SimpleCompArch.vhd Line: 75
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "CPU:Unit1|ctrl_unit:Unit0|IR:U2|IRout[0]" merged with LATCH primitive "CPU:Unit1|ctrl_unit:Unit0|IR:U2|dir_addr[0]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/IR.vhd Line: 25
     Info (13026): Duplicate LATCH primitive "CPU:Unit1|ctrl_unit:Unit0|IR:U2|IRout[1]" merged with LATCH primitive "CPU:Unit1|ctrl_unit:Unit0|IR:U2|dir_addr[1]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/IR.vhd Line: 25
@@ -772,21 +769,41 @@ Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
     Info (13026): Duplicate LATCH primitive "CPU:Unit1|ctrl_unit:Unit0|IR:U2|IRout[5]" merged with LATCH primitive "CPU:Unit1|ctrl_unit:Unit0|IR:U2|dir_addr[5]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/IR.vhd Line: 25
     Info (13026): Duplicate LATCH primitive "CPU:Unit1|ctrl_unit:Unit0|IR:U2|IRout[6]" merged with LATCH primitive "CPU:Unit1|ctrl_unit:Unit0|IR:U2|dir_addr[6]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/IR.vhd Line: 25
     Info (13026): Duplicate LATCH primitive "CPU:Unit1|ctrl_unit:Unit0|IR:U2|IRout[7]" merged with LATCH primitive "CPU:Unit1|ctrl_unit:Unit0|IR:U2|dir_addr[7]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/IR.vhd Line: 25
-Info (13000): Registers with preset signals will power-up high File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/controller.vhd Line: 53
+Info (13000): Registers with preset signals will power-up high File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/controller.vhd Line: 101
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13008): TRI or OPNDRN buffers permanently disabled
+    Warning (13010): Node "obuf:Unit3|obuf_out[0]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+    Warning (13010): Node "obuf:Unit3|obuf_out[1]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+    Warning (13010): Node "obuf:Unit3|obuf_out[2]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+    Warning (13010): Node "obuf:Unit3|obuf_out[3]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+    Warning (13010): Node "obuf:Unit3|obuf_out[4]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+    Warning (13010): Node "obuf:Unit3|obuf_out[5]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+    Warning (13010): Node "obuf:Unit3|obuf_out[6]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+    Warning (13010): Node "obuf:Unit3|obuf_out[7]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+    Warning (13010): Node "obuf:Unit3|obuf_out[8]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+    Warning (13010): Node "obuf:Unit3|obuf_out[9]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+    Warning (13010): Node "obuf:Unit3|obuf_out[10]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+    Warning (13010): Node "obuf:Unit3|obuf_out[11]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+    Warning (13010): Node "obuf:Unit3|obuf_out[12]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+    Warning (13010): Node "obuf:Unit3|obuf_out[13]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+    Warning (13010): Node "obuf:Unit3|obuf_out[14]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+    Warning (13010): Node "obuf:Unit3|obuf_out[15]" File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/obuf.vhd Line: 17
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "D_PCld" is stuck at GND File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/SimpleCompArch.vhd Line: 26
+    Warning (13410): Pin "D_jpz" is stuck at GND File: C:/Users/icrossle/Desktop/group7/SimpleCompArch2019/SimpleCompArch.vhd Line: 26
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (17049): 17 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 952 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 971 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 99 output pins
-    Info (21061): Implemented 835 logic cells
+    Info (21059): Implemented 115 output pins
+    Info (21061): Implemented 838 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
     Info: Peak virtual memory: 674 megabytes
-    Info: Processing ended: Wed Mar 06 15:41:49 2019
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Processing ended: Mon Mar 25 23:00:14 2019
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:21
 
 
